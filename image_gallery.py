@@ -51,11 +51,12 @@ class ImageGallery(QListWidget):
     def select_row_pos(self):
         pos = self.mapFromGlobal(QCursor.pos())
         item = self.itemAt(pos)
-        self.setCurrentItem(item)
-        return self.currentRow()
+        if item:
+            self.setCurrentItem(item)
+            return self.currentRow()
 
     def remove_row(self, index):
         if index > -1 and index < self.count():
-            item = self.takeItem(index) # noqa : F841
+            item = self.takeItem(index)  # noqa : F841
             del item
             self.scrollToItem(self.item(index), QAbstractItemView.PositionAtCenter)

@@ -343,9 +343,11 @@ class Window(QMainWindow):
 
             return True
         elif event.type() == QEvent.MouseButtonPress and event.button() == Qt.RightButton:
-            self.index = self.image_gallery.select_row_pos()
-            self.display_image()
-            return True
+            index = self.image_gallery.select_row_pos()
+            if index > -1:
+                self.index = index
+                self.display_image()
+                return True
         # pass the event on to the parent class
         return super(QMainWindow, self).eventFilter(obj, event)
 
