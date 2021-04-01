@@ -15,7 +15,6 @@
             "env": {},
             "envFile": "${workspaceRoot}/.env",
             "console": "integratedTerminal",
-            "args": ["--file","/home/balob/Téléchargements/e8nZC.gif"]
           },
     ]
 }

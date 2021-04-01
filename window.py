@@ -519,7 +519,7 @@ class Window(QMainWindow):
 
         if not self.index == -1:
             directory = QFileDialog.getExistingDirectory(self, libelle, self.images[self.index],
-                                                         QFileDialog.ShowDirsOnly)
+                                                         QFileDialog.ShowDirsOnly | QFileDialog.DontUseNativeDialog)
             if directory:
                 file = os.path.join(directory, os.path.basename(self.images[self.index]))
                 if not os.path.isfile(file):
