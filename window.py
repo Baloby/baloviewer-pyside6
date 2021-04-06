@@ -413,7 +413,7 @@ class Window(QMainWindow):
         del self.images[self.index]
         self.image_gallery.remove_row(self.index)
 
-        if len(self.images) == 1:
+        if len(self.images) == 0:
             self.images.clear()
             self.index = -1
             self.image.clear()
