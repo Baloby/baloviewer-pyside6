@@ -23,8 +23,3 @@ if __name__ == '__main__':
     window.showMaximized()
     app.set_activation_window(window)
     sys.exit(app.exec_())
-
-    # app = QApplication(sys.argv)
-    # main = Window()
-    # main.showMaximized()
-    # app.exec_()

@@ -71,7 +71,7 @@ class Window(QMainWindow):
         self.scroll_area.viewport().installEventFilter(self)
 
         # image list
-        self.image_gallery = ImageGallery()
+        self.image_gallery = ImageGallery(self)
         self.image_gallery.itemClicked.connect(self.image_gallery_clicked)
         self.image_gallery.viewport().installEventFilter(self)
         self.dock_widget = QDockWidget('Image Gallery', self)
